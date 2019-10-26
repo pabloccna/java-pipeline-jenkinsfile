@@ -11,13 +11,13 @@ pipeline {
         stage('Build') { 
             steps {
 		        echo 'Building ...'
-                sh 'javac HelloWorld.java'
+                sh "javac HelloWorld.java"
            }
         }
         stage('Run') { 
             steps {
                 echo 'Running ...'
-	        	echo 'java HelloWorld'
+	        	sh "java HelloWorld"
             }
         }
         stage('Notify to Slack'){

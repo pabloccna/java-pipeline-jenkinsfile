@@ -18,5 +18,10 @@ pipeline {
 	        	echo 'Hola mundo!!!!!!'
             }
         }
+        stage('Notify to Slack'){
+            steps {
+                echo 'Avisando...'
+            }
+        }
     }
 }

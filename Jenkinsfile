@@ -2,8 +2,10 @@ pipeline {
     agent any 
     stages {
         stage('Cleaning'){
-            echo 'Limpiando...'
-            sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/"
+            steps {
+                echo 'Limpiando...'
+                sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/"
+                }
         }
         stage('Clone repo') { 
             steps {

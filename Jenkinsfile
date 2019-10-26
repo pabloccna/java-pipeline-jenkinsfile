@@ -18,11 +18,5 @@ pipeline {
 	        	echo 'Hola mundo!!!!!!'
             }
         }
-        stage ('Aviso a Slack team')
-            steps{
-                echo 'Avisando a slack.....'
-            }
-        
-        }
     }
 }

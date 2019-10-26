@@ -32,7 +32,7 @@ pipeline {
                 channel: '#testing-java-slack-jenkins', 
                 color: 'good', 
                 message: 'Welcome to jenkins via slack, via Git con un Pipeline en Jenkis',
-                teamDomain: 'javahomecloud',
+                teamDomain: 'pablo-8tt9137',
                 tokenCredentialId: '4cyFjkMh078RGXbVAxXibqfc'
             }
         }

@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Notificating ...'
 	        	slackSend baseUrl: 'https://hooks.slack.com/services/', 
-                channel '#testing-java-slack-jenkins', 
+                channel: '#testing-java-slack-jenkins', 
                 color: 'good', 
                 message: 'Welcome to jenkins via slack, via Git con un Pipeline en Jenkis',
                 teamDomain: 'javahomecloud',

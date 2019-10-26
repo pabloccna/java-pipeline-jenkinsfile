@@ -4,7 +4,7 @@ pipeline {
         stage('Cleaning'){
             steps {
                 echo 'Limpiando...'
-                sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/"
+                sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/java"
                 }
         }
         stage('Clone repo') { 

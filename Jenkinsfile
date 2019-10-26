@@ -28,7 +28,7 @@ pipeline {
                 color: 'good', 
                 message: 'Welcome to jenkins via slack, via Git con un Pipeline en Jenkis',
                 teamDomain: 'javahomecloud',
-                tokenCrendetialId: '4cyFjkMh078RGXbVAxXibqfc'
+                tokenCredentialId: '4cyFjkMh078RGXbVAxXibqfc'
             }
         }
     }

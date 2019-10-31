@@ -3,9 +3,9 @@ pipeline {
     stages {
 	stage ('Probando AnsiColor')
 	    {
-		       ansiColor('xterm') {
-			   echo 'Hola mundo'
-				}
+		ansiColor('xterm') {
+		   echo 'Hola mundo'
+			}
       
 	    }
 	    

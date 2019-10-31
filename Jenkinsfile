@@ -25,11 +25,11 @@ pipeline {
 	        	sh "java HelloWorld"
             	}
         }
+	    
+    }
 	post { 
         	always { 
             	cleanWs()
 		}
         }
-
-    }
 }

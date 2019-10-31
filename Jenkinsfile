@@ -4,7 +4,7 @@ pipeline {
 	stage ('Probando AnsiColor')
 	    {
 		ansiColor('xterm') {
-		   echo 'Hola mundo'
+		   hola mundo 
 			}
       
 	    }

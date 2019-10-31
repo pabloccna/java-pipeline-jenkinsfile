@@ -3,28 +3,26 @@ pipeline {
     stages {
         stage('Cleaning'){
            steps {
-		   ansiColor('xterm') {
-			   echo 'Limpiando...'
-		   }
-                sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/java"
+		   echo 'limpiando..'
+		   sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/java"
               	  }
 	     }
         }
         stage('Clone repo') { 
             steps {
 	        	echo 'Cloning ...'
-                sh "git clone https://github.com/pabloccna/java-pipeline-jenkinsfile.git"	
+                	sh "git clone https://github.com/pabloccna/java-pipeline-jenkinsfile.git"	
             }
         }
         stage('Build') { 
             steps {
 		        echo 'Building ...'
-                sh "javac HelloWorld.java"
+                	sh "javac HelloWorld.java"
            }
         }
         stage('Run') { 
             steps {
-                echo 'Running ...'
+                	echo 'Running ...'
 	        	sh "java HelloWorld"
             	}
         }

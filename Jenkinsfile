@@ -1,13 +1,6 @@
 pipeline {
     agent any 
     stages {
-	stage ('Probando AnsiColor')
-	    {
-		ansiColor('xterm') {
-		   hola mundo 
-			}
-      
-	    }
 	    
         stage('Cleaning'){
            steps {

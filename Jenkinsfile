@@ -1,12 +1,12 @@
 pipeline {
     agent any 
     stages {
-	ansiColor('xterm')
-	    {
-        	stage('Cleaning'){
-         	   steps {
-             	   echo 'Limpiando...'
-             	   sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/java"
+        stage('Cleaning'){
+           steps {
+		   ansiColor('xterm') {
+			   echo 'Limpiando...'
+		   }
+                sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/java"
               	  }
 	     }
         }

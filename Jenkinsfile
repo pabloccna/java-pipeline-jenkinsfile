@@ -1,12 +1,6 @@
 pipeline {
     agent any 
     stages {
-	    stage ('Cleaning') {
-		    steps {
-	        	echo 'Cleaning ...'
-	        	sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkins"
-		    }
-            }
         stage('Clone repo') { 
             steps {
 	        	echo 'Cloning ...'

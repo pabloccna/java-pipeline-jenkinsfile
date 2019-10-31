@@ -1,11 +1,14 @@
 pipeline {
     agent any 
     stages {
-        stage('Cleaning'){
-            steps {
-                echo 'Limpiando...'
-                sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/java"
-                }
+	ansiColor('xterm')
+	    {
+        	stage('Cleaning'){
+         	   steps {
+             	   echo 'Limpiando...'
+             	   sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/java"
+              	  }
+	     }
         }
         stage('Clone repo') { 
             steps {

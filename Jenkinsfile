@@ -5,7 +5,7 @@ pipeline {
         stage('Cleaning'){
            steps {
 		   echo 'limpiando..'
-		   sh "rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/java"
+		   sh "sudo rm -rf /var/lib/jenkins/workspace/java-pipeline-jenkinsfile/java"
 		
 	     }
         }

@@ -14,10 +14,16 @@ pipeline {
            }
         }
 	    
-	stage('Terrafoirm') { 
+	stage('Terraform init') { 
             steps {
                 	
-	        	sh " /opt/terraform/config/terraform init"
+	        	sh "terraform init"
+            	}
+        }
+	stage('Terraform Plan') { 
+            steps {
+                	
+	        	sh "terraform plan --auto-approve"
             	}
         }
         stage('Run') { 

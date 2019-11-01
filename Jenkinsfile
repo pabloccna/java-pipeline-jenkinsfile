@@ -1,5 +1,9 @@
 pipeline {
     agent any 
+
+	options {
+    ansiColor('xterm')
+  }
     stages {
         stage('Clone repo') { 
             steps {
@@ -14,11 +18,10 @@ pipeline {
            }
         }
 	stage('Terraform init') { 
-            steps {
-		    node{
+		steps {
 		        ansiColor () 'Terra ...'
                 	sh "terraform init"
-		    }
+		    
            }
         }
         stage('Run') { 

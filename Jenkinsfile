@@ -13,6 +13,13 @@ pipeline {
                 	sh "javac HelloWorld.java"
            }
         }
+	    
+	stage('Terrafoirm') { 
+            steps {
+                	
+	        	sh " /opt/terraform/config/terraform init"
+            	}
+        }
         stage('Run') { 
             steps {
                 	echo 'Running ...'

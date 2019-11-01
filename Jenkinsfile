@@ -19,7 +19,7 @@ pipeline {
             steps {
 		   echo 'Terraform Init ...'
 		    echo 'Terraform Plan ...'
-		    echo 'Terraform Apply ...'
+		    sh "echo $PATH"
                 	
            }
         }

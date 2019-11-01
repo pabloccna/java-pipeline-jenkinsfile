@@ -9,6 +9,9 @@ pipeline {
         }
         stage('Build') { 
             steps {
+		    ansiColor('xterm') {
+   				 echo 'something that outputs ansi colored stuff'
+					}
 		        echo 'Building ...'
                 	sh "javac HelloWorld.java"
            }

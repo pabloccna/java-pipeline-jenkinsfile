@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage('Clone repo') { 
+        stage('Clone rep') { 
             steps {
 	        	echo 'Cloning ...'
                 	sh "git clone https://github.com/pabloccna/java-pipeline-jenkinsfile.git"	

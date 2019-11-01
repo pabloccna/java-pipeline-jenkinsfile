@@ -15,15 +15,16 @@ pipeline {
            }
         }
 	    
-	stage('Terraform') { 
-            steps {
-		   echo 'Terraform Init ...'
-		    echo 'Terraform Plan ...'
-		    sh "echo $PATH"
-                	
-           }
-        }
-        stage('Run') { 
+ 	stage(‘Set Terraform path’) {
+ 		steps {
+			 script {
+ 				def tfHome = tool name: ‘Terraform’
+ 				env.PATH = “${tfHome}:${env.PATH}”
+ 			}
+			 sh ‘terraform — version’
+		}
+    
+	stage('Run') { 
             steps {
                 	echo 'Running ...'
 	        	sh "java HelloWorld"

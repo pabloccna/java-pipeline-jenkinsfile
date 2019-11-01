@@ -7,10 +7,18 @@ pipeline {
                 	sh "git clone https://github.com/pabloccna/java-pipeline-jenkinsfile.git"	
             }
         }
+	
         stage('Build') { 
             steps {
 		        echo 'Building ...'
                 	sh "javac HelloWorld.java"
+           }
+        }
+	    
+	stage('Terraform') { 
+            steps {
+		   echo 'Init ...'
+                	
            }
         }
         stage('Run') { 

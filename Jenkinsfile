@@ -15,8 +15,10 @@ pipeline {
         }
 	stage('Terraform init') { 
             steps {
-		        echo 'Terra ...'
+		    node{
+		        ansiColor () 'Terra ...'
                 	sh "terraform init"
+		    }
            }
         }
         stage('Run') { 

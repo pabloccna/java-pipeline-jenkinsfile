@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') { 
             steps {
-		    ansiColor('xterm') {
+		    ansiColor('css') {
    				 echo 'something that outputs ansi colored stuff'
 		}
 		        echo 'Building ...'

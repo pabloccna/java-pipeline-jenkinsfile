@@ -13,13 +13,6 @@ pipeline {
                 	sh "javac HelloWorld.java"
            }
         }
-	stage('Terraform init') { 
-		steps {
-		        ansiColor () 'Terra ...'
-                	sh "terraform init"
-		    
-           }
-        }
         stage('Run') { 
             steps {
                 	echo 'Running ...'

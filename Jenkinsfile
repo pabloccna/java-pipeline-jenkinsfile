@@ -19,7 +19,7 @@ pipeline {
             steps {
                 	echo 'artefacto ...'
 	        	sh "zip -r art-v1.zip *.*"
-		    	cp art-v1.zip /artefactos
+		    	cp art-v1.zip /artefactos/art-v1.zip
             	}
         }  
 	   

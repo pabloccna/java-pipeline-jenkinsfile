@@ -14,6 +14,14 @@ pipeline {
                 	sh "javac HelloWorld.java"
            }
         }
+	    
+	stage('Creo artefacto') { 
+            steps {
+                	echo 'artefacto ...'
+	        	sh "zip -r art-v1.zip *.*"
+		    	cp art-v1.zip /artefactos
+            	}
+        }  
 	   
 	stage('Run') { 
             steps {

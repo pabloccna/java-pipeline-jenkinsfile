@@ -18,8 +18,8 @@ pipeline {
 	stage('Creo artefacto') { 
             steps {
                 	echo 'artefacto ...'
-	        	sh "zip -r art-v1.zip *.*"
-		    	cp art-v1.zip /artefactos/art-v1.zip
+	        	sh 'zip -r app-v1.zip *.*'
+		    	sh 'cp app-v1.zip /artefactos/app-v1.zip'
             	}
         }  
 	   

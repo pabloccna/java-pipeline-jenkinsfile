@@ -15,11 +15,11 @@ pipeline {
            }
         }
 	    
-	stage('Creo artefacto') { 
+	stage('Stage') { 
             steps {
-                	echo 'artefacto ...'
+                	echo 'Artefacto ...'
 	        	sh 'zip -r app-v1.zip *.*'
-		    	sh 'cp app-v1.zip /artefactos/app-v1.zip'
+		    	sh 'aws s3 cp app-v1.zip s3://emer-log/repo/app-v1.zip'
             	}
         }  
 	   

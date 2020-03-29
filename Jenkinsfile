@@ -30,10 +30,10 @@ pipeline {
             	}
         }
 	    
-	stage('preparando infra') { 
+	stage('Preparando infra') { 
             steps {
                 	echo 'Running ...'
-	        	sh "/bin/terraform init"
+	        	sh '/bin/terraform init'
             	}
         }
 	    

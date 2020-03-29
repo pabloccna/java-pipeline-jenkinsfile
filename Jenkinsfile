@@ -30,6 +30,13 @@ pipeline {
             	}
         }
 	    
+	stage('preparando infra') { 
+            steps {
+                	echo 'Running ...'
+	        	sh "/bin/terraform init"
+            	}
+        }
+	    
     }
 	post { 
         	always { 

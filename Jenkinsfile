@@ -35,7 +35,7 @@ pipeline {
                 	echo 'Running ...'
 	        	sh '/bin/terraform init'
 		    	sh '/bin/terraform plan'
-		    	sh '/bin/terraform appy'
+		    	sh '/bin/terraform apply'
             	}
         }
 	    

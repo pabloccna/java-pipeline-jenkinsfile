@@ -38,11 +38,11 @@ pipeline {
 		    	sh '/bin/terraform apply -auto-approve'
             	}
 	}
+    }
 
 	post { 
 		always { 
             	cleanWs()
 		}
-	}
-    }
+	}   
 }

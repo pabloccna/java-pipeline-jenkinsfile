@@ -38,20 +38,6 @@ pipeline {
 		    	sh '/bin/terraform apply -auto-approve'
             	}
 	}
-	stage('Testing Infra para deploy infra') {
-		paralell {
-			stage ('Test EC2') {
-				steps {
-                			echo '> Testing-ec2'
-				}
-			}
-			stage ('Test httpd') {
-				steps {
-                			echo '> Testing-httpd'
-				}
-			}
-		}
-    }
 
 	post { 
         	always { 

@@ -44,6 +44,7 @@ pipeline {
 				steps {
                 			echo '> Testing-ec2'
 				}
+			}
 			stage ('Test httpd') {
 				agent any
 				steps {

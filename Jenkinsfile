@@ -40,10 +40,12 @@ pipeline {
 	stage('Testing Infra para deploy infra') {
 		paralell {
 			stage ('Test EC2') {
+				agent any
 				steps {
                 			echo '> Testing-ec2'
 				}
 			stage ('Test httpd') {
+				agent any
 				steps {
                 			echo '> Testing-httpd'
 				}

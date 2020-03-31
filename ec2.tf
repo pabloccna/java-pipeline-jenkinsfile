@@ -7,7 +7,7 @@ provider "aws" {
 ####
 output "t" {
 	description = "La IP pub de..."
- 	value = "${aws_instance.example.public_ip}"
+ 	value = ["${aws_instance.example.public_ip}"]
 }
 
 resource "aws_instance" "example" {

@@ -40,12 +40,16 @@ pipeline {
 	}
 	stage('Testing infra') { 
 		parallel{
-			steps {
-                		echo '> Testing Ping'
-				sh 'ping 127.0.0.1'
+			stage('Testing ping'){
+				steps {
+                			echo '> Testing Ping'
+					sh 'ping 127.0.0.1'
+				}
 			}
-			steps{
-				echo 'HTTP abierto'
+			stage('Testing HTTP'){
+				steps{
+					echo 'HTTP abierto'
+				}
 			}
             	}
 	}

@@ -5,7 +5,7 @@ provider "aws" {
 ####
 # output
 ####
-output "public_ip-2" {
+output "public_ip" {
 	description = "La IP pub de..."
  	value = "${aws_instance.public_ip}"
 

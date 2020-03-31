@@ -49,6 +49,7 @@ pipeline {
 			stage('Testing HTTP'){
 				steps{
 					echo 'HTTP abierto'
+					sh 'curl http://127.0.0.1'
 				}
 			}
             	}

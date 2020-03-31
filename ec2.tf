@@ -7,7 +7,7 @@ provider "aws" {
 ####
 output "public_ip" {
 	description = "La IP pub de..."
- 	value = "${aws_instance.public_ip}"
+ 	value = "${aws_instance.example.public_ip}"
 
 resource "aws_instance" "example" {
   ami           = "ami-0fc61db8544a617ed"

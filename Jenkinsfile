@@ -40,7 +40,7 @@ pipeline {
 	}
 	stage('Testing infra') { 
 		parallel{
-			stage('Testing ping'){
+			stage('Testing PING'){
 				steps {
                 			echo '> Testing Ping'
 					sh 'ping 127.0.0.1 -c4'

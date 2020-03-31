@@ -36,7 +36,6 @@ pipeline {
 	        	sh '/bin/terraform init'
 		    	sh '/bin/terraform plan'
 		    	sh '/bin/terraform apply -auto-approve'
-		    	sh'/bin/terraform output t >> /ip.txt'
             	}
 	}
 	stage('Testing infra') { 

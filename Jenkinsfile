@@ -43,7 +43,7 @@ pipeline {
 			stage('Testing ping'){
 				steps {
                 			echo '> Testing Ping'
-					sh 'ping 127.0.0.1'
+					sh 'ping 127.0.0.1 -c4'
 				}
 			}
 			stage('Testing HTTP'){

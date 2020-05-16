@@ -49,7 +49,7 @@ pipeline {
 			stage('Testing HTTP'){
 				steps{
 					echo '> Testing HTTP'
-					sh 'curl http://54.91.169.133'
+					
 				}
 			}
             	}
